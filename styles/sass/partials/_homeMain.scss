@@ -1,0 +1,52 @@
+// Who is Willow Section
+
+.whoWillow {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+// Blog Post Section
+
+.blogPostContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.blogPostContent {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.blogTwo {
+    flex-direction: row-reverse;
+
+    .blogImage {
+        box-shadow: 20px 20px $primary;
+        position: relative;
+
+        &:after {
+            box-shadow: 200px 200px 200px $primary;
+            content: " ";
+            height: 100%;
+            position: absolute;
+            left: -50%;
+            top: 0;
+            width: 150%;
+        }
+    }
+
+    .blogPostContent {
+        align-items: flex-end;
+        align-self: flex-start;
+        text-align: end;
+    }
+}
+
+// Willow's Journey Section
+

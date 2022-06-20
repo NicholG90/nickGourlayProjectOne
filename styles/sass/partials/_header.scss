@@ -1,0 +1,31 @@
+header {
+    height: 80vh;
+    background-color: $primary;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+.circleText {
+    position: relative;
+    left: 80px;
+}
+
+.headerPhoto {
+    box-shadow: 20px 20px $white;
+}
+
+.headerTextContainer {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-size: 7rem;
+    }
+    
+}
+

@@ -1,0 +1,6 @@
+@mixin headings($fontSize, $fontColor) {
+    text-transform: uppercase;
+    font-family: $headingFont;
+    font-size: $fontSize;
+    color: $fontColor;
+}

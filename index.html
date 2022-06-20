@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willow - Home</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <!-- Skip Link -->
@@ -15,21 +19,23 @@
     <header>
         <div class="wrapper">
             <nav>
-                <ul>
+                <ul class="navContainer">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><h1>Willow</h1></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div>
-                <div>
-                    <img src="./assets/circle-text.png" alt="" aria-hidden="true">
-                    <span class="sr-only">Daily Musings of</span>
+            <div class="headerContainer">
+                <div class="headerTextContainer">
+                        <div class="circleText">
+                            <img src="./assets/circle-text.png" alt="" aria-hidden="true">
+                            <span class="sr-only">Daily Musings of</span>
+                        </div>
+                    <h2>Willow</h2>
                 </div>
-                <h2>Willow</h2>
-                <img src="./assets/home-image-1.jpg" alt="A photo of Willow in a rain coat standing among tropical plants">
+                <img class="headerPhoto" src="./assets/home-image-1.jpg" alt="A photo of Willow in a rain coat standing among tropical plants">
             </div>
 
         </div> <!-- End Wrapper -->
@@ -40,7 +46,7 @@
 
         <!-- Who's Willow Section -->
         <section>
-            <div class="wrapper">
+            <div class="wrapper whoWillow">
                 <h3>Who's Willow?</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dolor aspernatur sed ipsa libero quas similique non sint expedita. Perferendis est quibusdam cupiditate consequatur quasi. Voluptates dicta iusto tempore! Fugit dolore enim ab adipisci tempora vel rem totam, tempore doloremque atque omnis magnam quibusdam tenetur quidem dignissimos sapiente, voluptates unde.</p>
                 <a href="#" class="button">Find Out More</a>
@@ -50,16 +56,20 @@
         <!-- Blog Posts Section -->
         <section>
             <div class="wrapper">
-                <div class="blogPostContainer">
-                    <img src="./assets/home-image-2.jpg" alt="A white bridge crossing between green forest with a waterfall behind">
+                <div class="blogPostContainer blogOne">
+                    <div class="blogImage">
+                        <img src="./assets/home-image-2.jpg" alt="A white bridge crossing between green forest with a waterfall behind">
+                    </div>
                     <div class="blogPostContent">
                         <h4>Favourite Things</h4>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae alias ea, nihil modi quos quae delectus, cum sequi cumque et at hic distinctio officiis animi?</p>
                         <a href="#" class="button">Read More</a>
                     </div>
                 </div>
-                <div class="blogPostContainer">
-                    <img src="./assets/home-image-3.jpg" alt="A white flower floating on water next to a lilypad">
+                <div class="blogPostContainer blogTwo">
+                    <div class="blogImage">
+                        <img src="./assets/home-image-3.jpg" alt="A white flower floating on water next to a lilypad">
+                    </div>
                     <div class="blogPostContent">
                         <h4>Bucket List</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae provident ipsam deleniti molestiae non quae cumque, nemo ullam adipisci repellat?</p>
@@ -104,28 +114,28 @@
                 <li class="footerContainer">
                         <i></i>
                         <div class="footerContent">
-                            <h5>Photos</h5>
+                            <h4>Photos</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laborum maiores eligendi expedita fugiat neque?</p>
                         </div>
                 </li>
                 <li class="footerContainer">
                         <i></i>
                         <div class="footerContent">
-                            <h5>About</h5>
+                            <h4>About</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia modi dolor qui tenetur esse magni?</p>
                         </div>
                 </li>
                 <li class="footerContainer">
                         <i></i>
                         <div class="footerContent">
-                            <h5>Blog</h5>
+                            <h4>Blog</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas alias incidunt debitis eveniet cupiditate?</p>
                         </div>
                 </li>
                 <li class="footerContainer">
                         <i></i>
                         <div class="footerContent">
-                            <h5>Contact Me</h5>
+                            <h4>Contact Me</h4>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, assumenda? Ullam dolorum cum ab possimus.</p>
                         </div>
                 </li>

@@ -1,0 +1,33 @@
+// Skip Link
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 10;
+
+    &:focus {
+        left: 0;
+    }
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    margin: 0 auto;
+    color: $white;
+    align-items: center;
+    padding: 20px 0;
+
+    li a {
+        font-family: $bodyFont;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.45rem;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+}

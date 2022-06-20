@@ -1,0 +1,22 @@
+html {
+    background-color: $white;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1260px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: $accent;
+    width: fit-content;
+    padding: 10px;
+    font-size: 1rem;
+    color: $black;
+    line-height: 1.6rem;
+}

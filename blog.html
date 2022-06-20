@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willow - Blog</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <!-- Skip Link -->
@@ -21,7 +25,7 @@
                     <li>
                         <h1>Willow</h1>
                     </li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -33,6 +37,83 @@
     
     <!-- Main Content -->
     <main id="mainContent">
+        <div class="wrapper">
+
+            <!-- Container for Left Aligned Boxes -->
+            <div class="aboutPostsContainer">
+                <div class="aboutWillow">
+                    <img src="./assets/blog-image-2.jpg" alt="Image of women standing in jungle">
+                    <h5>About Willow</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam perspiciatis ea debitis officiis? Quasi eveniet beatae enim, porro esse quas. <a href="#">Find out more.</a></p>
+                </div>
+                <div class="recentPost">
+                    <h5>Recent Posts</h5>
+                    <ul><li>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </li>
+                    <li>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </li>
+                    <li>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </li>
+                    <li>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </li></ul>
+                </div>
+            </div>
+
+            <!-- Container for Right Aligned Boxes -->
+            <div class="blogContainer">
+
+                <!-- Blog Post Content -->
+                <div class="blogPost">
+                    <h3>My Favourite Travel Destinations</h3>
+                    <p>Monday October 8th, 2019 by Willow</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deleniti hic amet officia neque, quis adipisci porro exercitationem. Consequatur consequuntur iusto maiores sunt, officia voluptates repellat veritatis quasi, perspiciatis recusandae quisquam commodi voluptatibus neque eum perferendis atque debitis itaque qui. At hic unde placeat laboriosam illum, ad itaque ea? Quidem corrupti, asperiores sequi minus, cupiditate, amet optio ducimus laboriosam voluptatibus nam aperiam voluptates eaque quibusdam odio error eius! Explicabo, ullam fuga provident possimus omnis veritatis obcaecati! Consequuntur itaque quam voluptatem odio saepe earum aliquid, cum expedita fuga, ut nostrum vitae amet, numquam quos porro accusantium at facilis! Sapiente, perferendis saepe esse maiores tenetur nemo impedit deserunt, maxime et dolore ex quos temporibus sint. Quam quaerat ipsum placeat iure vel, voluptate non facere minima quidem architecto ex assumenda. Tempora neque atque odio, sequi, nulla eos hic reiciendis officiis ea dolore consequuntur exercitationem. Alias asperiores, amet necessitatibus reiciendis assumenda, inventore totam non illo fugiat ex libero tempora rerum veritatis cum quo. Repellat magnam neque ducimus distinctio eveniet voluptate aliquid, dignissimos numquam molestiae dolorum beatae? Mollitia quia, ipsum dolore aliquam similique maxime, placeat, reiciendis earum commodi vitae officia debitis. Veritatis ea minima doloremque itaque sequi in. A corporis tempora architecto deleniti aut? Amet?</p>
+                </div>
+
+                <!-- Comments -->
+                <div class="comments">
+                    <div class="comment commentOne">
+                        <img src="./assets/blog-image-3.jpg" alt="Headshot of individual with long hair and rimmed hat">
+                        <p>Tuesday October 9th, 2018 by Barb</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse repellendus eius incidunt vitae dolor cum ad? Consequuntur magni nam dolor sapiente fuga iure, distinctio ex laboriosam non dolorem doloribus explicabo, vitae aliquam pariatur eligendi nisi debitis qui itaque tenetur temporibus minus natus ullam! Odit iure delectus architecto veritatis nostrum consequatur?</p>
+                    </div>
+                    <div class="comment commentOne">
+                        <img src="./assets/blog-image-4.jpg" alt="Headshot of individual smiling through tree leafs ">
+                        <p>Wednesday October 10th, 2018 by Daisy</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum facere ipsa a doloribus molestiae sed recusandae laudantium fuga aspernatur quas numquam asperiores sit quos ab nesciunt, vitae temporibus, quidem optio fugiat labore odio velit? Qui corrupti cum perspiciatis reprehenderit blanditiis enim excepturi, voluptatem, ducimus earum sed minima perferendis iure aliquid.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form action="">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" placeholder="Name" required>
+                
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+
+        </div> <!-- End Wrapper -->
     </main>
+
+    <!-- Footer -->
+    <footer>
+    
+        <!-- Copyright Content -->
+        <div class="copyright">
+            <p>Copyright © 2018 HackerYou</p>
+        </div>
+    
+    </footer>
 </body>
 </html>

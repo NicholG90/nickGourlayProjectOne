@@ -220,3 +220,238 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  letter-spacing: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+blockquote,
+a {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  color: #1f1f1f;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: #f6f6f6;
+}
+
+h2 {
+  font-size: 4rem;
+  color: #f6f6f6;
+  line-height: 4.6rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+ul,
+li,
+a,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  background-color: #f6f6f6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #e4a436;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  font-size: 1rem;
+  color: #1f1f1f;
+  line-height: 1.6rem;
+}
+
+header {
+  height: 80vh;
+  background-color: #345231;
+}
+
+.headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.circleText {
+  position: relative;
+  left: 80px;
+}
+
+.headerPhoto {
+  -webkit-box-shadow: 20px 20px #f6f6f6;
+          box-shadow: 20px 20px #f6f6f6;
+}
+
+.headerTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.headerTextContainer h2 {
+  font-size: 7rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 10;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+.navContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 65%;
+  margin: 0 auto;
+  color: #f6f6f6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+.navContainer li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.45rem;
+}
+.navContainer li a:hover {
+  color: #e4a436;
+}
+
+.whoWillow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px auto;
+}
+
+.blogPostContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.blogPostContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.blogTwo {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.blogTwo .blogImage {
+  -webkit-box-shadow: 20px 20px #345231;
+          box-shadow: 20px 20px #345231;
+  position: relative;
+}
+.blogTwo .blogImage:after {
+  -webkit-box-shadow: 200px 200px 200px #345231;
+          box-shadow: 200px 200px 200px #345231;
+  content: " ";
+  height: 100%;
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 150%;
+}
+.blogTwo .blogPostContent {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: end;
+}
