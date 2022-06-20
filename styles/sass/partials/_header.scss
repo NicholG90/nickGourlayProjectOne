@@ -3,6 +3,8 @@ header {
     background-color: $primary;
 }
 
+// Index/Home Header
+
 .headerContainer {
     display: flex;
     align-items: center;
@@ -16,7 +18,7 @@ header {
 }
 
 .headerPhoto {
-    box-shadow: 20px 20px $white;
+    box-shadow: 20px 20px white;
 }
 
 .headerTextContainer {
@@ -29,3 +31,24 @@ header {
     
 }
 
+// Blog & Contact Header
+
+.blogHeader, .contactHeader {
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.blogHeader {
+    background-image: url(../assets/blog-image-1.jpg);
+}
+.contactHeader {
+    background-image: url(../assets/contact-image-1.jpg);
+}
+
+header div div h2 {
+    position: absolute;
+    bottom: -15px;
+}

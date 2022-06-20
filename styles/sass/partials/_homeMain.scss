@@ -1,12 +1,18 @@
 // Who is Willow Section
 
 .whoWillow {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 100px auto;
-}
+    background-color: $white;
+        .wrapper {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                margin: 0 auto;
+                padding: 100px 0;
+                gap: 20px;
+            }
+    }
+
 
 // Blog Post Section
 
@@ -15,12 +21,14 @@
     justify-content: space-between;
     gap: 100px;
     margin-bottom: 100px;
+    background-color: white;
 }
 
 .blogPostContent {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
+    gap: 20px;
 }
 
 .blogTwo {
@@ -31,13 +39,14 @@
         position: relative;
 
         &:after {
-            box-shadow: 200px 200px 200px $primary;
+            background-color: $primary;
             content: " ";
             height: 100%;
             position: absolute;
-            left: -50%;
-            top: 0;
-            width: 150%;
+            left: 200px;
+            top: 20px;
+            width: 300px;
+            z-index: -1;
         }
     }
 
@@ -50,3 +59,75 @@
 
 // Willow's Journey Section
 
+.willowJourney {
+    background-color: $white;
+    padding: 100px 0;
+
+    .wrapper {
+        display: flex;
+        gap: 100px;
+
+        img {
+            box-shadow: 20px 20px $secondary;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}
+
+// Middle Image
+
+.middleImage {
+    width: 100vw;
+}
+
+// Gallery Section
+
+.gallery {
+    display: flex;
+    gap: 25px;
+    padding: 50px 0;
+    justify-content: space-evenly;
+}
+
+// Home Page Footer
+
+footer {
+    background-color: $white;
+}
+
+.footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    gap: 50px;
+
+    .footerListItem {
+        flex-basis: calc(50% - 50px);
+        display: flex;
+
+         i {
+            background-color: $accent;
+            padding: 15px;
+            height: fit-content;
+            border-radius: 50%;
+            margin-right: 25px;
+         }
+    }
+
+    .footerContent h4 {
+        margin-bottom: 15px;
+    }
+}
+
+// Copyright
+
+.copyright {
+    background-color: $black;
+    text-align: center;
+    color: $white;
+}

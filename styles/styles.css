@@ -223,6 +223,7 @@ template {
 
 html {
   font-size: 125%;
+  letter-spacing: 1px;
 }
 
 body {
@@ -230,7 +231,6 @@ body {
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6rem;
-  letter-spacing: 0px;
 }
 
 h1,
@@ -273,7 +273,8 @@ h5 {
 ul,
 li,
 a,
-input {
+input,
+p {
   margin: 0;
   padding: 0;
 }
@@ -285,6 +286,10 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p {
+  letter-spacing: 0px;
 }
 
 html {
@@ -337,8 +342,8 @@ header {
 }
 
 .headerPhoto {
-  -webkit-box-shadow: 20px 20px #f6f6f6;
-          box-shadow: 20px 20px #f6f6f6;
+  -webkit-box-shadow: 20px 20px white;
+          box-shadow: 20px 20px white;
 }
 
 .headerTextContainer {
@@ -353,6 +358,27 @@ header {
   font-size: 7rem;
 }
 
+.blogHeader, .contactHeader {
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.blogHeader {
+  background-image: url(../assets/blog-image-1.jpg);
+}
+
+.contactHeader {
+  background-image: url(../assets/contact-image-1.jpg);
+}
+
+header div div h2 {
+  position: absolute;
+  bottom: -15px;
+}
+
 .skip-link {
   position: absolute;
   left: -1000px;
@@ -361,6 +387,10 @@ header {
 }
 .skip-link:focus {
   left: 0;
+}
+
+nav {
+  background-color: #345231;
 }
 
 .navContainer {
@@ -389,6 +419,9 @@ header {
 }
 
 .whoWillow {
+  background-color: #f6f6f6;
+}
+.whoWillow .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,7 +433,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0;
+  gap: 20px;
 }
 
 .blogPostContainer {
@@ -412,6 +447,7 @@ header {
           justify-content: space-between;
   gap: 100px;
   margin-bottom: 100px;
+  background-color: white;
 }
 
 .blogPostContent {
@@ -424,6 +460,7 @@ header {
           flex-direction: column;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  gap: 20px;
 }
 
 .blogTwo {
@@ -438,14 +475,14 @@ header {
   position: relative;
 }
 .blogTwo .blogImage:after {
-  -webkit-box-shadow: 200px 200px 200px #345231;
-          box-shadow: 200px 200px 200px #345231;
+  background-color: #345231;
   content: " ";
   height: 100%;
   position: absolute;
-  left: -50%;
-  top: 0;
-  width: 150%;
+  left: 200px;
+  top: 20px;
+  width: 300px;
+  z-index: -1;
 }
 .blogTwo .blogPostContent {
   -webkit-box-align: end;
@@ -454,4 +491,159 @@ header {
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-align: end;
+}
+
+.willowJourney {
+  background-color: #f6f6f6;
+  padding: 100px 0;
+}
+.willowJourney .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+}
+.willowJourney .wrapper img {
+  -webkit-box-shadow: 20px 20px #709b6b;
+          box-shadow: 20px 20px #709b6b;
+}
+.willowJourney .wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.middleImage {
+  width: 100vw;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  padding: 50px 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer {
+  background-color: #f6f6f6;
+}
+
+.footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 100px 0;
+  gap: 50px;
+}
+.footerContainer .footerListItem {
+  -ms-flex-preferred-size: calc(50% - 50px);
+      flex-basis: calc(50% - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footerContainer .footerListItem i {
+  background-color: #e4a436;
+  padding: 15px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+.footerContainer .footerContent h4 {
+  margin-bottom: 15px;
+}
+
+.copyright {
+  background-color: #1f1f1f;
+  text-align: center;
+  color: #f6f6f6;
+}
+
+.mainContentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.aboutPostsContainer,
+.blogContainer,
+.aboutWillow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+.aboutPostsContainer {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.blogContainer {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+}
+
+.aboutWillow,
+.recentPosts,
+.blogPost,
+.comment {
+  background-color: white;
+  padding: 25px;
+}
+
+.blogPost {
+  border-bottom: 5px solid #709b6b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.comment {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.comment .commentImage {
+  width: 100%;
+}
+
+.commentText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutWillow {
+  gap: 25px;
 }

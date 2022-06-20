@@ -16,10 +16,10 @@
     <a href="#mainContent" class="skip-link">Skip to the main content</a>
     
     <!-- Header -->
-    <header>
-        <div class="wrapper">
-            <nav>
-                <ul>
+    <header class="blogHeader">
+        <nav>
+            <div class="wrapper">
+                <ul class="navContainer">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li>
@@ -28,16 +28,18 @@
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
-            </nav>
+            </div> <!-- End Wrapper -->
+        </nav>
+        <div class="wrapper">
             <div>
                 <h2>Blog & News</h2>
             </div>
-        </div> <!-- End Wrapper -->
+        </div>
     </header>
     
     <!-- Main Content -->
     <main id="mainContent">
-        <div class="wrapper">
+        <div class="wrapper mainContentContainer">
 
             <!-- Container for Left Aligned Boxes -->
             <div class="aboutPostsContainer">
@@ -46,7 +48,7 @@
                     <h5>About Willow</h5>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam perspiciatis ea debitis officiis? Quasi eveniet beatae enim, porro esse quas. <a href="#">Find out more.</a></p>
                 </div>
-                <div class="recentPost">
+                <div class="recentPosts">
                     <h5>Recent Posts</h5>
                     <ul><li>
                         <p>Lorem ipsum dolor sit.</p>
@@ -68,7 +70,7 @@
 
                 <!-- Blog Post Content -->
                 <div class="blogPost">
-                    <h3>My Favourite Travel Destinations</h3>
+                    <h4>My Favourite Travel Destinations</h4>
                     <p>Monday October 8th, 2019 by Willow</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deleniti hic amet officia neque, quis adipisci porro exercitationem. Consequatur consequuntur iusto maiores sunt, officia voluptates repellat veritatis quasi, perspiciatis recusandae quisquam commodi voluptatibus neque eum perferendis atque debitis itaque qui. At hic unde placeat laboriosam illum, ad itaque ea? Quidem corrupti, asperiores sequi minus, cupiditate, amet optio ducimus laboriosam voluptatibus nam aperiam voluptates eaque quibusdam odio error eius! Explicabo, ullam fuga provident possimus omnis veritatis obcaecati! Consequuntur itaque quam voluptatem odio saepe earum aliquid, cum expedita fuga, ut nostrum vitae amet, numquam quos porro accusantium at facilis! Sapiente, perferendis saepe esse maiores tenetur nemo impedit deserunt, maxime et dolore ex quos temporibus sint. Quam quaerat ipsum placeat iure vel, voluptate non facere minima quidem architecto ex assumenda. Tempora neque atque odio, sequi, nulla eos hic reiciendis officiis ea dolore consequuntur exercitationem. Alias asperiores, amet necessitatibus reiciendis assumenda, inventore totam non illo fugiat ex libero tempora rerum veritatis cum quo. Repellat magnam neque ducimus distinctio eveniet voluptate aliquid, dignissimos numquam molestiae dolorum beatae? Mollitia quia, ipsum dolore aliquam similique maxime, placeat, reiciendis earum commodi vitae officia debitis. Veritatis ea minima doloremque itaque sequi in. A corporis tempora architecto deleniti aut? Amet?</p>
                 </div>
@@ -76,14 +78,22 @@
                 <!-- Comments -->
                 <div class="comments">
                     <div class="comment commentOne">
-                        <img src="./assets/blog-image-3.jpg" alt="Headshot of individual with long hair and rimmed hat">
-                        <p>Tuesday October 9th, 2018 by Barb</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse repellendus eius incidunt vitae dolor cum ad? Consequuntur magni nam dolor sapiente fuga iure, distinctio ex laboriosam non dolorem doloribus explicabo, vitae aliquam pariatur eligendi nisi debitis qui itaque tenetur temporibus minus natus ullam! Odit iure delectus architecto veritatis nostrum consequatur?</p>
+                        <div class="commentImage">
+                            <img src="./assets/blog-image-3.jpg" alt="Headshot of individual with long hair and rimmed hat">
+                        </div>
+                        <div class="commentText">
+                            <p>Tuesday October 9th, 2018 by Barb</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse repellendus eius incidunt vitae dolor cum ad? Consequuntur magni nam dolor sapiente fuga iure, distinctio ex laboriosam non dolorem doloribus explicabo, vitae aliquam pariatur eligendi nisi debitis qui itaque tenetur temporibus minus natus ullam! Odit iure delectus architecto veritatis nostrum consequatur?</p>
+                        </div>
                     </div>
                     <div class="comment commentOne">
-                        <img src="./assets/blog-image-4.jpg" alt="Headshot of individual smiling through tree leafs ">
-                        <p>Wednesday October 10th, 2018 by Daisy</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum facere ipsa a doloribus molestiae sed recusandae laudantium fuga aspernatur quas numquam asperiores sit quos ab nesciunt, vitae temporibus, quidem optio fugiat labore odio velit? Qui corrupti cum perspiciatis reprehenderit blanditiis enim excepturi, voluptatem, ducimus earum sed minima perferendis iure aliquid.</p>
+                        <div class="commentImage">
+                            <img src="./assets/blog-image-4.jpg" alt="Headshot of individual smiling through tree leafs ">
+                        </div>
+                        <div class="commentText">
+                            <p>Wednesday October 10th, 2018 by Daisy</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum facere ipsa a doloribus molestiae sed recusandae laudantium fuga aspernatur quas numquam asperiores sit quos ab nesciunt, vitae temporibus, quidem optio fugiat labore odio velit? Qui corrupti cum perspiciatis reprehenderit blanditiis enim excepturi, voluptatem, ducimus earum sed minima perferendis iure aliquid.</p>
+                        </div>
                     </div>
                 </div>
 
