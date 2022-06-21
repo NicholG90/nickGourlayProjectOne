@@ -1,0 +1,43 @@
+.contactPageContainer {
+    display: flex;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.contactInformation {
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    padding-bottom: 100px;
+    width: 33%;
+
+    .socialIcons {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.8rem;
+
+        a i {
+            color: $primary;
+        }
+    }
+
+    .addressContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a, p {
+            font-family: $bodyFont;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .emailAddress {
+            font-weight: bold;
+        }
+    }
+}

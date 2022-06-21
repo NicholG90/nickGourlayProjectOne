@@ -239,7 +239,8 @@ h3,
 h4,
 h5,
 blockquote,
-a {
+a,
+button {
   font-family: "Abril Fatface", cursive;
   font-weight: normal;
   color: #1f1f1f;
@@ -438,6 +439,12 @@ nav {
   gap: 20px;
 }
 
+.blogSection {
+  position: relative;
+  background-color: white;
+  z-index: 0;
+}
+
 .blogPostContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,7 +454,6 @@ nav {
           justify-content: space-between;
   gap: 100px;
   margin-bottom: 100px;
-  background-color: white;
 }
 
 .blogPostContent {
@@ -463,34 +469,62 @@ nav {
   gap: 20px;
 }
 
-.blogTwo {
+.blogTwoOuterSection,
+.blogOneOuterSection {
+  position: relative;
+}
+
+.blogTwo,
+.blogOne {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.blogTwo .blogImage {
-  -webkit-box-shadow: 20px 20px #345231;
-          box-shadow: 20px 20px #345231;
-  position: relative;
+.blogTwo .blogImage,
+.blogOne .blogImage {
+  width: calc(50% + 50px);
 }
-.blogTwo .blogImage:after {
+.blogTwo .blogImage:after,
+.blogOne .blogImage:after {
   background-color: #345231;
   content: " ";
   height: 100%;
   position: absolute;
-  left: 200px;
+  right: 0px;
   top: 20px;
-  width: 300px;
+  width: calc(50% - 20px);
   z-index: -1;
 }
-.blogTwo .blogPostContent {
+.blogTwo .blogPostContent,
+.blogOne .blogPostContent {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-align: end;
+  width: calc(50% - 50px);
+}
+
+.blogOne {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.blogOne .blogImage:after {
+  background-color: #709b6b;
+  left: 0px;
+  width: calc(50% + 20px);
+}
+.blogOne .blogPostContent {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: start;
 }
 
 .willowJourney {
@@ -646,4 +680,98 @@ footer {
 
 .aboutWillow {
   gap: 25px;
+}
+
+.contactPageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  padding: 100px 0;
+}
+
+.contactInformation {
+  background-color: white;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 100px;
+  width: 33%;
+}
+.contactInformation .socialIcons {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.8rem;
+}
+.contactInformation .socialIcons a i {
+  color: #345231;
+}
+.contactInformation .addressContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.contactInformation .addressContainer a, .contactInformation .addressContainer p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  text-transform: none;
+}
+.contactInformation .addressContainer .emailAddress {
+  font-weight: bold;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+form .nameEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+form .nameEmail input {
+  background-color: white;
+  padding: 20px;
+  border: none;
+  width: 50%;
+}
+form textarea {
+  resize: none;
+  background-color: white;
+  padding: 20px;
+  border: none;
+  height: 500px;
+}
+
+.submitButton {
+  width: 100%;
+  border: none;
 }

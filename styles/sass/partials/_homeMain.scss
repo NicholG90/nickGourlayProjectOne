@@ -16,12 +16,17 @@
 
 // Blog Post Section
 
+.blogSection {
+    position: relative;
+    background-color: white;
+    z-index: 0;
+}
+
 .blogPostContainer {
     display: flex;
     justify-content: space-between;
     gap: 100px;
     margin-bottom: 100px;
-    background-color: white;
 }
 
 .blogPostContent {
@@ -31,21 +36,26 @@
     gap: 20px;
 }
 
-.blogTwo {
+.blogTwoOuterSection,
+.blogOneOuterSection {
+    position: relative;
+}
+
+.blogTwo,
+.blogOne {
     flex-direction: row-reverse;
 
     .blogImage {
-        box-shadow: 20px 20px $primary;
-        position: relative;
+        width: calc(50% + 50px);
 
         &:after {
             background-color: $primary;
             content: " ";
             height: 100%;
             position: absolute;
-            left: 200px;
+            right: 0px;
             top: 20px;
-            width: 300px;
+            width: calc(50% - 20px);
             z-index: -1;
         }
     }
@@ -54,6 +64,26 @@
         align-items: flex-end;
         align-self: flex-start;
         text-align: end;
+        width: calc(50% - 50px);
+    }
+}
+
+
+.blogOne {
+    flex-direction: row;
+
+    .blogImage {
+        &:after {
+            background-color: $secondary;
+            left: 0px;
+            width: calc(50% + 20px);
+        }
+    }
+
+    .blogPostContent {
+        align-items: flex-start;
+        align-self: flex-end;
+        text-align: start;
     }
 }
 
