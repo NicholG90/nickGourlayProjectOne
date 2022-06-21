@@ -415,7 +415,7 @@ nav {
   font-size: 1rem;
   line-height: 1.45rem;
 }
-.navContainer li a:hover {
+.navContainer li a:hover, .navContainer li a:focus {
   color: #e4a436;
 }
 
@@ -719,6 +719,9 @@ footer {
 }
 .contactInformation .socialIcons a i {
   color: #345231;
+}
+.contactInformation .socialIcons a i:hover, .contactInformation .socialIcons a i:focus {
+  color: #e4a436;
 }
 .contactInformation .addressContainer {
   display: -webkit-box;
