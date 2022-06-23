@@ -1,7 +1,11 @@
 .mainContentContainer {
     display: flex;
-    gap: 50px;
+    gap: 25px;
     padding-top: 100px;
+
+    @include respond(medium) {
+            flex-direction: column;
+        }
 }
 
 .aboutPostsContainer,
@@ -9,13 +13,20 @@
 .aboutWillow {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 25px;
 }
 .aboutPostsContainer {
-    flex-basis: 35%;
+    flex-basis: 30%;
+
+    @include respond(medium) {
+            flex-direction: row;
+        }
+    @include respond(medium) {
+        flex-direction: column;
+    }
 }
 .blogContainer {
-    flex-basis: 65%;
+    flex-basis: 70%;
 }
 
 .aboutWillow,
@@ -48,8 +59,18 @@
     flex-direction: column;
 }
 
+.commentTwo {
+    border-bottom: 5px solid $secondary;
+}
+
 .aboutWillow {
     gap: 25px;
+    @include respond(medium) {
+            width: 50%;
+        }
+    @include respond(medium) {
+        width: 100%;
+    }
 }
 
 // Maybe mixins for all these flex boxes and gaps

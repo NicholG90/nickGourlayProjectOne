@@ -4,3 +4,41 @@
     font-size: $fontSize;
     color: $fontColor;
 }
+
+// Media Query Mixin - Pulled from https: //dev.to/paul_duvall/sass-and-media-queries-hb2
+@mixin respond($breakpoint) {
+    @if($breakpoint ==large) {
+        @media (max-width: 1050px) {
+            @content;
+        }
+    }
+    @if($breakpoint ==medium) {
+        @media (max-width: 850px) {
+            @content;
+        }
+    }
+    @if($breakpoint ==small) {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+}
+
+
+// @mixin respond-large {
+//     @media (max-width: 1050px) {
+//         @content;
+//     }
+// }
+
+// @mixin respond-medium {
+//     @media (max-width: 850px) {
+//         @content;
+//     }
+// }
+
+// @mixin respond-small {
+//     @media (max-width: 550px) {
+//         @content;
+//     }
+// }

@@ -15,6 +15,10 @@ header {
 .circleText {
     position: relative;
     left: 80px;
+
+    img {
+        max-width: none;
+    }
 }
 
 .headerPhoto {
@@ -34,7 +38,7 @@ header {
 // Blog & Contact Header
 
 .blogHeader, .contactHeader {
-    height: 60vh;
+    height: 50vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,7 +52,17 @@ header {
     background-image: url(../assets/contact-image-1.jpg);
 }
 
-header div div h2 {
+.blogContactTitle {
     position: absolute;
     bottom: -15px;
+
+    @include respond(medium) {
+            font-size: 3rem;
+            bottom: -23px
+        }
+
+    @include respond(small) {
+        font-size: 2rem;
+        bottom: -31px
+    }
 }

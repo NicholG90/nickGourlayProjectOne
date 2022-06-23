@@ -9,11 +9,19 @@ form {
         width: 100%;
         gap: 10px;
 
+        @include respond(medium) {
+            flex-direction: column;
+            }
+
         input {
             background-color: white;
             padding: 20px;
             border: none;
             width: 50%;
+
+            @include respond(medium) {
+                width: 100%;
+                }
         }
     }
 
