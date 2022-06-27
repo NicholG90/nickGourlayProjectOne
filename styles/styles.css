@@ -320,7 +320,7 @@ img {
 }
 
 header {
-  height: 80vh;
+  height: 70vh;
   background-color: #345231;
 }
 
@@ -405,8 +405,88 @@ header {
   left: 0;
 }
 
+input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+input[type=checkbox]:checked ~ .burgerContainer {
+  left: 0;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+input[type=checkbox]:checked ~ .mobileShift {
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+@media (max-width: 850px) {
+  input[type=checkbox]:checked ~ .mobileShift {
+    -webkit-transform: translateX(40%);
+            transform: translateX(40%);
+  }
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.burgerContainer {
+  position: fixed;
+  left: -30%;
+  width: 30%;
+  background-color: #e4a436;
+  height: 100vh;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+@media (max-width: 850px) {
+  .burgerContainer {
+    left: -40%;
+    width: 40%;
+  }
+}
+.burgerContainer li a {
+  color: #f6f6f6;
+}
+.burgerContainer li a:hover, .burgerContainer li a:focus {
+  color: #345231;
+}
+
+.mobileShift {
+  position: relative;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.burgerButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f6f6f6;
+}
+
 nav {
   background-color: #345231;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 
 .navContainer {
@@ -424,6 +504,11 @@ nav {
           align-items: center;
   padding: 20px 0;
 }
+@media (max-width: 1050px) {
+  .navContainer {
+    width: 100%;
+  }
+}
 .navContainer li a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -432,6 +517,11 @@ nav {
 }
 .navContainer li a:hover, .navContainer li a:focus {
   color: #e4a436;
+}
+@media (max-width: 850px) {
+  .navContainer li a {
+    display: none;
+  }
 }
 
 .whoWillow {
@@ -456,7 +546,7 @@ nav {
 
 .blogSection {
   position: relative;
-  background-color: white;
+  background-color: #f6f6f6;
   z-index: 0;
 }
 

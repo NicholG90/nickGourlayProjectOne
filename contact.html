@@ -15,31 +15,47 @@
 <body>
     <!-- Skip Link -->
     <a href="#mainContent" class="skip-link">Skip to the main content</a>
+
+    <!-- Navigation -->
+    <!-- Hamburger Navaigation -->
+    <input type="checkbox" id="openBurgerMenu">
+    <ul class="burgerContainer">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
     
+    <nav class="mobileShift">
+        <div class="wrapper burgerButtonContainer">
+            <!-- Burger Nav Button/Label -->
+            <label for="openBurgerMenu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <!-- Full Size Nav -->
+            <ul class="navContainer">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li>
+                    <h1>Willow</h1>
+                </li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div> <!-- End Wrapper -->
+    </nav>
+
     <!-- Header -->
-    <header class="contactHeader">
-        <nav>
-            <div class="wrapper">
-                <ul class="navContainer">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li>
-                        <h1>Willow</h1>
-                    </li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div> <!-- End Wrapper -->
-        </nav>
+    <header class="contactHeader mobileShift">
         <div class="wrapper">
             <div>
                 <h2 class="blogContactTitle">Contact Me</h2>
             </div>
-        </div>
+        </div> <!-- End Wrapper -->
     </header>
 
     <!-- Main Content -->
-    <main id="mainContent">
+    <main id="mainContent" class="mobileShift">
         
         <div class="wrapper contactPageContainer">
 
@@ -99,7 +115,7 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="mobileShift">
 
         <!-- Copyright Content -->
         <div class="copyright">

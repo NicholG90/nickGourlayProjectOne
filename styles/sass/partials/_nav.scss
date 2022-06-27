@@ -11,9 +11,84 @@
     }
 }
 
+// Burger Menu
+
+// Burger Menu largely inspired by ToyBox Ecommerce with additional ideas from https: //codepen.io/tonkec/pen/Ogzpqz
+
+input[type=checkbox] {
+    opacity: 0;
+    position: absolute;
+
+    &:checked ~ .burgerContainer {
+        left: 0;
+        transition: 0.75s;
+    }
+
+    &:checked ~ .mobileShift {
+        transform: translateX(30%);
+        transition: 0.75s;
+
+    @include respond(medium) {
+            transform: translateX(40%);
+        }
+    }
+}
+
+label {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.burgerContainer {
+    position: fixed;
+    left: -30%;
+    width: 30%;
+    background-color: $accent;
+    height: 100vh;
+    transition: 0.75s;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    @include respond(medium) {
+        left: -40%;
+        width: 40%;
+    }
+
+    li a {
+        color: $white;
+        &:hover, &:focus {
+            color: $primary;
+        }
+    }
+}
+
+.mobileShift {
+    position: relative;
+    transition: 0.75s;
+}
+
+.burgerButtonContainer {
+    display: flex;
+    align-items: center;
+    color: $white;
+}
+// Main Nav
+
 nav {
     background-color: $primary;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+
 }
+
+
 
 .navContainer {
     display: flex;
@@ -24,6 +99,11 @@ nav {
     align-items: center;
     padding: 20px 0;
 
+    @include respond(large) {
+            width: 100%;
+        }
+        
+
 
     li a {
         font-family: $bodyFont;
@@ -33,6 +113,10 @@ nav {
 
         &:hover, &:focus {
             color: $accent;
+        }
+
+        @include respond(medium) {
+            display: none;
         }
     }
 }
