@@ -61,9 +61,16 @@ label {
     }
 
     li a {
+
+        font-family: $bodyFont;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.45rem;
         color: $white;
+        
         &:hover, &:focus {
             color: $primary;
+            transition: 0.1s;
         }
     }
 }
@@ -113,6 +120,7 @@ nav {
 
         &:hover, &:focus {
             color: $accent;
+            transition: 0.1s;
         }
 
         @include respond(medium) {

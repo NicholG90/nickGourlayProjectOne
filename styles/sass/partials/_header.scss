@@ -10,30 +10,58 @@ header {
     align-items: center;
     padding-top: 50px;
     justify-content: space-between;
-}
+    gap: 100px;
 
-.circleText {
-    position: relative;
-    left: 80px;
-
-    img {
-        max-width: none;
-    }
-}
-
-.headerPhoto {
-    box-shadow: 20px 20px white;
-}
-
-.headerTextContainer {
-    display: flex;
-    align-items: center;
+    @include respond(medium) {
+            flex-direction: column;
+            margin: 0 auto;
+        }
 
     h2 {
-        font-size: 7rem;
+        margin: 0 auto;
+        position: relative;
+
+        &::before {
+            content: url(../assets/circle-text.png);
+            position: absolute;
+            left: -60px;
+            top: -50px;
+        }
     }
-    
 }
+
+// .circleText {
+//     position: relative;
+//     left: 80px;
+
+//     img {
+//         max-width: none;
+//     }
+// }
+
+.headerPhotoContainer {
+    box-shadow: 20px 20px white;
+    z-index: 1;
+}
+
+// .headerTextContainer {
+//     display: flex;
+//     align-items: center;
+
+//     h2 {
+//         font-size: 7rem;
+
+//         @include respond(extraLarge) {
+//             font-size: 5rem;
+//         }
+
+//         @include respond(large) {
+//             font-size: 3.8rem;
+//         }
+
+//     }
+    
+// }
 
 // Blog & Contact Header
 

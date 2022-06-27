@@ -335,31 +335,32 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 100px;
 }
-
-.circleText {
+@media (max-width: 850px) {
+  .headerContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+}
+.headerContainer h2 {
+  margin: 0 auto;
   position: relative;
-  left: 80px;
 }
-.circleText img {
-  max-width: none;
+.headerContainer h2::before {
+  content: url(../assets/circle-text.png);
+  position: absolute;
+  left: -60px;
+  top: -50px;
 }
 
-.headerPhoto {
+.headerPhotoContainer {
   -webkit-box-shadow: 20px 20px white;
           box-shadow: 20px 20px white;
-}
-
-.headerTextContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.headerTextContainer h2 {
-  font-size: 7rem;
+  z-index: 1;
 }
 
 .blogHeader, .contactHeader {
@@ -460,10 +461,16 @@ label:hover {
   }
 }
 .burgerContainer li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.45rem;
   color: #f6f6f6;
 }
 .burgerContainer li a:hover, .burgerContainer li a:focus {
   color: #345231;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .mobileShift {
@@ -517,6 +524,8 @@ nav {
 }
 .navContainer li a:hover, .navContainer li a:focus {
   color: #e4a436;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 @media (max-width: 850px) {
   .navContainer li a {
@@ -912,6 +921,19 @@ footer {
   .aboutWillow {
     width: 100%;
   }
+}
+.aboutWillow p a {
+  color: #709b6b;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+.recentPosts ul {
+  list-style: disc;
+  padding-left: 30px;
 }
 
 .contactPageContainer {

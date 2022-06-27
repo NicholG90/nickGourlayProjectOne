@@ -6,7 +6,14 @@
 }
 
 // Media Query Mixin - Pulled from https: //dev.to/paul_duvall/sass-and-media-queries-hb2
+
+
 @mixin respond($breakpoint) {
+    @if($breakpoint ==extraLarge) {
+            @media (max-width: 1350px) {
+                @content;
+            }
+        }
     @if($breakpoint ==large) {
         @media (max-width: 1050px) {
             @content;
