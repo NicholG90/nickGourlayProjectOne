@@ -317,6 +317,13 @@ img {
   font-size: 1rem;
   color: #1f1f1f;
   line-height: 1.6rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #709b6b;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 header {
@@ -332,10 +339,10 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 50px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
 }
 @media (max-width: 850px) {
   .headerContainer {
@@ -344,23 +351,58 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 auto;
+    padding-top: 50px;
   }
-}
-.headerContainer h2 {
-  margin: 0 auto;
-  position: relative;
-}
-.headerContainer h2::before {
-  content: url(../assets/circle-text.png);
-  position: absolute;
-  left: -60px;
-  top: -50px;
 }
 
 .headerPhotoContainer {
   -webkit-box-shadow: 20px 20px white;
           box-shadow: 20px 20px white;
   z-index: 1;
+}
+
+.headerTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.headerTextContainer h2 {
+  font-size: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+@media (max-width: 1350px) {
+  .headerTextContainer h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1050px) {
+  .headerTextContainer h2 {
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 850px) {
+  .headerTextContainer h2 {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .headerTextContainer h2 {
+    font-size: 2rem;
+  }
+}
+.headerTextContainer h2 .circleText {
+  position: absolute;
+  left: -60px;
+  top: -40px;
+}
+.headerTextContainer h2 .circleText img {
+  max-width: none;
 }
 
 .blogHeader, .contactHeader {
@@ -474,19 +516,27 @@ label:hover {
 }
 
 .mobileShift {
-  position: relative;
   -webkit-transition: 0.75s;
   transition: 0.75s;
 }
 
 .burgerButtonContainer {
+  display: none;
+  color: #f6f6f6;
+}
+@media (max-width: 850px) {
+  .burgerButtonContainer {
+    display: block;
+  }
+}
+
+nav .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f6f6f6;
 }
 
 nav {
@@ -516,6 +566,13 @@ nav {
     width: 100%;
   }
 }
+@media (max-width: 850px) {
+  .navContainer {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
 .navContainer li a {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -535,6 +592,7 @@ nav {
 
 .whoWillow {
   background-color: #f6f6f6;
+  margin-top: 100px;
 }
 .whoWillow .wrapper {
   display: -webkit-box;
@@ -555,8 +613,13 @@ nav {
 
 .blogSection {
   position: relative;
-  background-color: #f6f6f6;
+  background: linear-gradient(180deg, #f6f6f6, #f6f6f6 40px, white 40px, white calc(100% - 40px), #f6f6f6 calc(100% - 40px), #f6f6f6);
   z-index: 0;
+}
+@media (max-width: 1350px) {
+  .blogSection {
+    background: white;
+  }
 }
 
 .blogPostContainer {
@@ -566,7 +629,6 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 100px;
   margin-bottom: 100px;
 }
 
@@ -606,7 +668,11 @@ nav {
 }
 .blogTwo .blogImage,
 .blogOne .blogImage {
-  width: calc(50% + 50px);
+  width: 50%;
+}
+.blogTwo .blogImage img,
+.blogOne .blogImage img {
+  width: 100%;
 }
 @media (max-width: 850px) {
   .blogTwo .blogImage,
@@ -640,6 +706,7 @@ nav {
       align-self: flex-start;
   text-align: end;
   width: calc(50% - 50px);
+  padding: 0 50px 0 0;
 }
 @media (max-width: 850px) {
   .blogTwo .blogPostContent,
@@ -685,6 +752,7 @@ nav {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: start;
+  padding: 0 0 0 50px;
 }
 @media (max-width: 850px) {
   .blogOne .blogPostContent {

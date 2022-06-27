@@ -2,6 +2,7 @@
 
 .whoWillow {
     background-color: $white;
+    margin-top: 100px;
         .wrapper {
                 display: flex;
                 flex-direction: column;
@@ -18,14 +19,17 @@
 
 .blogSection {
     position: relative;
-    background-color: $white;
+    background: linear-gradient(180deg, $white, $white 40px, white 40px, white calc(100% - 40px), $white calc(100% - 40px), $white);
     z-index: 0;
+
+    @include respond(extraLarge) {
+            background: white;
+        }
 }
 
 .blogPostContainer {
     display: flex;
     justify-content: space-between;
-    gap: 100px;
     margin-bottom: 100px;
 }
 
@@ -50,7 +54,11 @@
         }
 
     .blogImage {
-        width: calc(50% + 50px);
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
 
         @include respond(medium) {
                 width: 100%;
@@ -77,6 +85,7 @@
         align-self: flex-start;
         text-align: end;
         width: calc(50% - 50px);
+        padding: 0 50px 0 0;
 
         @include respond(medium) {
                 width: 100%;
@@ -111,6 +120,8 @@
         align-items: flex-start;
         align-self: flex-end;
         text-align: start;
+        padding: 0 0 0 50px;
+        
 
         @include respond(medium) {
             align-items: center;

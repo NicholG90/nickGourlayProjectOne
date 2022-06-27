@@ -76,15 +76,23 @@ label {
 }
 
 .mobileShift {
-    position: relative;
     transition: 0.75s;
 }
 
 .burgerButtonContainer {
+    display: none;
+    color: $white;
+
+    @include respond(medium) {
+        display: block;
+        }
+}
+
+nav .wrapper {
     display: flex;
     align-items: center;
-    color: $white;
 }
+
 // Main Nav
 
 nav {
@@ -109,7 +117,9 @@ nav {
     @include respond(large) {
             width: 100%;
         }
-        
+    @include respond(medium) {
+            justify-content: flex-end;
+    }
 
 
     li a {

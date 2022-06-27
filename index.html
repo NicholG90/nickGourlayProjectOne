@@ -27,11 +27,15 @@
     </ul>
     
     <nav class="mobileShift">
-        <div class="wrapper burgerButtonContainer">
+        <div class="wrapper">
             <!-- Burger Nav Button/Label -->
-            <label for="openBurgerMenu">
-                <i class="fa-solid fa-bars"></i>
-            </label>
+            <div class="burgerButtonContainer">
+                <label for="openBurgerMenu">
+                    <i class="fa-solid fa-bars">
+                        <span class="sr-only">Menu Button</span>
+                    </i>
+                </label>
+            </div>
             <!-- Full Size Nav -->
             <ul class="navContainer">
                 <li><a href="./index.html">Home</a></li>
@@ -49,18 +53,19 @@
     <header class="mobileShift">
         <div class="wrapper">
             <div class="headerContainer">
-                <!-- <div class="headerTextContainer">
+                <div class="headerTextContainer">
+
+                    <h2>
                         <div class="circleText">
                             <img src="./assets/circle-text.png" alt="" aria-hidden="true">
                             <span class="sr-only">Daily Musings of</span>
-                        </div> -->
-                    <h2>Willow</h2>
-                    <div class="headerPhotoContainer">
-                        <img class="headerPhoto" src="./assets/home-image-1.jpg"
-                            alt="A photo of Willow in a rain coat standing among tropical plants">
-                    </div>
+                        </div>
+                        <p>Willow</p>
+                    </h2>
                 </div>
-
+                <div class="headerPhotoContainer">
+                    <img class="headerPhoto" src="./assets/home-image-1.jpg" alt="A photo of Willow in a rain coat standing among tropical plants">
+                </div>
             </div>
         </div> <!-- End Wrapper -->
     </header>
@@ -85,7 +90,7 @@
                 <div class="wrapper">
                     <div class="blogPostContainer blogOne">
                         <div class="blogImage">
-                            <img src="./assets/home-image-2.jpg" alt="A white bridge crossing between green forest with a waterfall behind">
+                            <img src="./assets/home-image-2.jpg" class="blogImageOne"alt="A white bridge crossing between green forest with a waterfall behind">
                         </div>
                         <div class="blogPostContent">
                             <h4>Favourite Things</h4>
@@ -99,7 +104,7 @@
                 <div class="wrapper">
                     <div class="blogPostContainer blogTwo">
                         <div class="blogImage">
-                            <img src="./assets/home-image-3.jpg" alt="A white flower floating on water next to a lilypad">
+                            <img src="./assets/home-image-3.jpg" class="blogImageTwo" alt="A white flower floating on water next to a lilypad">
                         </div>
                         <div class="blogPostContent">
                             <h4>Bucket List</h4>

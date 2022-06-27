@@ -9,59 +9,59 @@ header {
     display: flex;
     align-items: center;
     padding-top: 50px;
-    justify-content: space-between;
-    gap: 100px;
+    justify-content: center;
+    gap: 50px;
 
     @include respond(medium) {
             flex-direction: column;
             margin: 0 auto;
+            padding-top: 50px;
         }
-
-    h2 {
-        margin: 0 auto;
-        position: relative;
-
-        &::before {
-            content: url(../assets/circle-text.png);
-            position: absolute;
-            left: -60px;
-            top: -50px;
-        }
-    }
 }
 
-// .circleText {
-//     position: relative;
-//     left: 80px;
 
-//     img {
-//         max-width: none;
-//     }
-// }
 
 .headerPhotoContainer {
     box-shadow: 20px 20px white;
     z-index: 1;
 }
 
-// .headerTextContainer {
-//     display: flex;
-//     align-items: center;
+.headerTextContainer {
+    display: flex;
+    align-items: center;
 
-//     h2 {
-//         font-size: 7rem;
+    h2 {
+        font-size: 7rem;
+        display: flex;
+        position: relative;
 
-//         @include respond(extraLarge) {
-//             font-size: 5rem;
-//         }
+        @include respond(extraLarge) {
+            font-size: 5rem;
+        }
 
-//         @include respond(large) {
-//             font-size: 3.8rem;
-//         }
+        @include respond(large) {
+            font-size: 3.8rem;
+        }
+        @include respond(medium) {
+            font-size: 3.2rem;
+        }
+        @include respond(small) {
+            font-size: 2rem;
+        }
 
-//     }
+        .circleText {
+            position: absolute;
+            left: -60px;
+            top: -40px;
+
+            img {
+                max-width: none;
+            }
+        }
+
+    }
     
-// }
+}
 
 // Blog & Contact Header
 
