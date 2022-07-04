@@ -1,9 +1,13 @@
+// SCSS Partial for header across all pages
+
+//  Elements used on all Headers
+
 header {
     height: 70vh;
     background-color: $primary;
 }
 
-// Index/Home Header
+// Unique Index/Home Header elements
 
 .headerContainer {
     display: flex;
@@ -24,6 +28,21 @@ header {
 .headerPhotoContainer {
     box-shadow: 20px 20px white;
     z-index: 1;
+
+    @include respond(medium) {
+            padding-top: 25px;
+        }
+
+    .headerPhoto {
+
+        @include respond(medium) {
+        height: 60vh;
+        }
+
+        @include respond(small){
+            height: 100%;
+        }
+    }
 }
 
 .headerTextContainer {
@@ -46,7 +65,7 @@ header {
             font-size: 3.2rem;
         }
         @include respond(small) {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         .circleText {
@@ -54,8 +73,17 @@ header {
             left: -60px;
             top: -40px;
 
+            @include respond(small) {
+                left: -20px;
+                top: -5px;
+            }
+
             img {
                 max-width: none;
+
+                @include respond(small) {
+                        height: 5rem;
+                    }
             }
         }
 
@@ -63,7 +91,7 @@ header {
     
 }
 
-// Blog & Contact Header
+// Unique Blog & Contact Header Elements
 
 .blogHeader, .contactHeader {
     height: 50vh;

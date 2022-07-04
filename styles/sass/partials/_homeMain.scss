@@ -1,3 +1,5 @@
+// SCSS Partial for main content on index.html
+
 // Who is Willow Section
 
 .whoWillow {
@@ -11,6 +13,10 @@
                 margin: 0 auto;
                 padding: 100px 0;
                 gap: 20px;
+
+                @include respond(small) {
+                        padding: 50px 0 100px 0;
+                    }
             }
     }
 
@@ -92,6 +98,7 @@
                 align-items: center;
                 align-self: center;
                 text-align: center;
+                padding: 25px 0 0 0;
             }
     }
 }
@@ -127,6 +134,7 @@
             align-items: center;
             align-self: center;
             text-align: center;
+            padding: 25px 0 0 0;
         }
     }
 }

@@ -1,3 +1,5 @@
+// SCSS Partial for main content on blog.html
+
 .mainContentContainer {
     display: flex;
     gap: 25px;
@@ -15,19 +17,16 @@
     flex-direction: column;
     gap: 25px;
 }
+
 .aboutPostsContainer {
     flex-basis: 30%;
-
-    @include respond(medium) {
-            flex-direction: row;
-        }
-    @include respond(medium) {
-        flex-direction: column;
-    }
 }
+
 .blogContainer {
     flex-basis: 70%;
 }
+
+
 
 .aboutWillow,
 .recentPosts,
@@ -49,12 +48,17 @@
     display: flex;
     gap: 10px;
 
+    @include respond(medium) {
+            flex-direction: column;
+        }
+
     .commentImage {
-        width: 100%;
+        flex-basis: 10%;
     }
 }
 
 .commentText {
+    flex-basis: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -89,5 +93,3 @@
         padding-left: 30px;
     }
 }
-
-// Maybe mixins for all these flex boxes and gaps

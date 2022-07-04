@@ -360,6 +360,21 @@ header {
           box-shadow: 20px 20px white;
   z-index: 1;
 }
+@media (max-width: 850px) {
+  .headerPhotoContainer {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 850px) {
+  .headerPhotoContainer .headerPhoto {
+    height: 60vh;
+  }
+}
+@media (max-width: 480px) {
+  .headerPhotoContainer .headerPhoto {
+    height: 100%;
+  }
+}
 
 .headerTextContainer {
   display: -webkit-box;
@@ -393,7 +408,7 @@ header {
 }
 @media (max-width: 480px) {
   .headerTextContainer h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 .headerTextContainer h2 .circleText {
@@ -401,8 +416,19 @@ header {
   left: -60px;
   top: -40px;
 }
+@media (max-width: 480px) {
+  .headerTextContainer h2 .circleText {
+    left: -20px;
+    top: -5px;
+  }
+}
 .headerTextContainer h2 .circleText img {
   max-width: none;
+}
+@media (max-width: 480px) {
+  .headerTextContainer h2 .circleText img {
+    height: 5rem;
+  }
 }
 
 .blogHeader, .contactHeader {
@@ -610,6 +636,11 @@ nav {
   padding: 100px 0;
   gap: 20px;
 }
+@media (max-width: 480px) {
+  .whoWillow .wrapper {
+    padding: 50px 0 100px 0;
+  }
+}
 
 .blogSection {
   position: relative;
@@ -718,6 +749,7 @@ nav {
     -ms-flex-item-align: center;
         align-self: center;
     text-align: center;
+    padding: 25px 0 0 0;
   }
 }
 
@@ -762,6 +794,7 @@ nav {
     -ms-flex-item-align: center;
         align-self: center;
     text-align: center;
+    padding: 25px 0 0 0;
   }
 }
 
@@ -910,22 +943,6 @@ footer {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
-@media (max-width: 850px) {
-  .aboutPostsContainer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-@media (max-width: 850px) {
-  .aboutPostsContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
 
 .blogContainer {
   -ms-flex-preferred-size: 70%;
@@ -959,11 +976,22 @@ footer {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 850px) {
+  .comment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .comment .commentImage {
-  width: 100%;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
 }
 
 .commentText {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

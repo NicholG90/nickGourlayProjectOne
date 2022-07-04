@@ -1,11 +1,4 @@
-@mixin headings($fontSize, $fontColor) {
-    text-transform: uppercase;
-    font-family: $headingFont;
-    font-size: $fontSize;
-    color: $fontColor;
-}
-
-// Media Query Mixin - Pulled from https: //dev.to/paul_duvall/sass-and-media-queries-hb2
+// Media Query Mixin - Inspired from https: //dev.to/paul_duvall/sass-and-media-queries-hb2
 
 
 @mixin respond($breakpoint) {
@@ -30,22 +23,3 @@
         }
     }
 }
-
-
-// @mixin respond-large {
-//     @media (max-width: 1050px) {
-//         @content;
-//     }
-// }
-
-// @mixin respond-medium {
-//     @media (max-width: 850px) {
-//         @content;
-//     }
-// }
-
-// @mixin respond-small {
-//     @media (max-width: 550px) {
-//         @content;
-//     }
-// }
